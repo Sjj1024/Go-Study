@@ -6,7 +6,7 @@ func main() {
 	/*
 	块注释内容
 	1. 编译命令： go build 1-hello.go
-	2.运行命令：go 1-hello.go
+	2.运行命令：go run 1-hello.go
 	*/
 	fmt.Println("hello world!")
 }
