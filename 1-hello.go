@@ -2,11 +2,9 @@ package main
 import "fmt"
 
 func main() {
-	// \t表示回车，会覆盖行首的内容
+	// \t表示回车，会覆盖行首的内容，推荐使用行注释。源代码也是行注释
 	/*
 	块注释内容
-	1. 编译命令： go build 1-hello.go
-	2.运行命令：go run 1-hello.go
 	*/
-	fmt.Println("hello world!")
+	fmt.Println("wo\tai\tni\tzhogn\tguo")
 }
