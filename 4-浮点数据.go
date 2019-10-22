@@ -14,3 +14,10 @@ func main() {
 	fmt.Println(num1)
 	fmt.Println(num2)
 }
+
+
+
+
+9.4
+-9.34342323252
+[Finished in 0.7s]
