@@ -20,6 +20,9 @@ var (
 // 变量赋值：定义变量后，给变量赋值，例如var n int        n = 20
 // 加号使用：两边都是数值时候，表示数学运算，两边都是str时，表示连接运算
 
+// go中基本数据类型：数值型，字符型，布尔型，字符串型
+// go中派生数据类型：指针，数组，结构体，管道，函数，切片，接口，map
+
 func main() {
 	// 先定义后赋值的方式，var是variable，意思是变量，可以变的
 	var name int
@@ -56,7 +59,6 @@ func main() {
 	fmt.Println("sum=",sum)
 	fmt.Println("info=",info)
 }
-
 
 
 
