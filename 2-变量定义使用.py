@@ -13,6 +13,9 @@ var (
 	c3 = 400
 	c4 = "nihao"
 )
+// 6.变量使用的注意事项:变量重新赋值只能在作用域内同一类型内变换
+
+
 func main() {
 	// 先定义后赋值的方式，var是variable，意思是变量，可以变的
 	var name int
@@ -28,6 +31,8 @@ func main() {
 	var a1,a2,a3 = 100,"xiaoming","男孩"  // 同时定义不同类型的变量
 	// 同样可以使用类型推到使用多个赋值,省略了var
 	b1,b2,b3 := 18,"小红","女孩"
+	// 修改变量的值
+	b3 = "超甜"
 
 	// 打印输出格式
 	fmt.Println("name=",name)
@@ -39,6 +44,8 @@ func main() {
 	fmt.Println("b1,b2,b3=",b1,b2,b3)
 	// 使用全局变量
 	fmt.Println("c1,c2,c3,c4=",c1,c2,c3,c4)
+	// 打印修改后的变量
+	fmt.Println("b3=",b3)
 }
 
 
@@ -50,6 +57,7 @@ height= 178
 gender= 男孩
 n1,n2,n3= 0 0 0
 a1,a2,a3= 100 xiaoming 男孩
-b1,b2,b3= 18 小红 女孩
+b1,b2,b3= 18 小红 超甜
 c1,c2,c3,c4= 200 300 400 nihao
-[Finished in 0.6s]
+b3= 超甜
+[Finished in 0.7s]
