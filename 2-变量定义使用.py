@@ -5,6 +5,14 @@ import "fmt"
 // 2.根据智自行判定变量类型，类型推到
 // 3.第三种：省略var，使用：=，但是要注意等号左侧的变量不应该是已经声明过的，否则报错
 // 4.多变量声明：同时声明多个变量，var n1， n2， n3 int 或者使用同时赋值，或者使用类型推导省略var
+// 5.如何声明多个全局变量：
+var c1 = 200
+var c2 = 300
+// 一次性声明多个全局
+var (
+	c3 = 400
+	c4 = "nihao"
+)
 func main() {
 	// 先定义后赋值的方式，var是variable，意思是变量，可以变的
 	var name int
@@ -29,7 +37,10 @@ func main() {
 	fmt.Println("n1,n2,n3=",n1,n2,n3)
 	fmt.Println("a1,a2,a3=",a1,a2,a3)
 	fmt.Println("b1,b2,b3=",b1,b2,b3)
+	// 使用全局变量
+	fmt.Println("c1,c2,c3,c4=",c1,c2,c3,c4)
 }
+
 
 
 
@@ -40,4 +51,5 @@ gender= 男孩
 n1,n2,n3= 0 0 0
 a1,a2,a3= 100 xiaoming 男孩
 b1,b2,b3= 18 小红 女孩
-[Finished in 0.8s]
+c1,c2,c3,c4= 200 300 400 nihao
+[Finished in 0.6s]
