@@ -39,6 +39,7 @@ func main() {
 	b3 = "超甜"
 	// 加号使用
 	sum := name + age
+	info := gender + height
 
 	// 打印输出格式
 	fmt.Println("name=",name)
@@ -53,6 +54,7 @@ func main() {
 	// 打印修改后的变量
 	fmt.Println("b3=",b3)
 	fmt.Println("sum=",sum)
+	fmt.Println("info=",info)
 }
 
 
@@ -70,4 +72,5 @@ b1,b2,b3= 18 小红 超甜
 c1,c2,c3,c4= 200 300 400 nihao
 b3= 超甜
 sum= 37
-[Finished in 0.7s]
+info= 男孩178
+[Finished in 1.0s]
