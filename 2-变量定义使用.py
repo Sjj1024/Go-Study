@@ -2,7 +2,7 @@ package main
 import "fmt"
 // 变量相当于内存中的一个房间，
 func main() {
-	// 先定义后赋值的方式
+	// 先定义后赋值的方式，var是variable，意思是变量，可以变的
 	var name int
 	name = 19
 	// 定义的同时赋值
