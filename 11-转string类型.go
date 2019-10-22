@@ -28,9 +28,11 @@ func main() {
 
 	// 第二种方式：使用strconv函数
 	str2 = strconv.FormatInt(int64(num1), 10)
+	// 或者使用Itoa函数将int转成string
+	str2 = strconv.Itoa(num1)
 	// strconv.FormatFloat(num1,'f',10,64)中f表示输出格式是原格式，10表示小数点后保留几位，64表示float64类型
-	str2 = strconv.FormatFloat(num2,'f',10,64)
-	str2 = strconv.FormatBool(num3)
+	// str2 = strconv.FormatFloat(num2,'f',10,64)
+	// str2 = strconv.FormatBool(num3)
 	// str2 = strconv.FormatInt(int64(num1), 10)
 
 	// 打印出第一种转换方式的输出
@@ -44,7 +46,6 @@ func main() {
 	fmt.Printf("%q \n",str2)
 
 }
-
 
 
 
