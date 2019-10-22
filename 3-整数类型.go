@@ -12,7 +12,8 @@ func main() {
 	num1 := -129
 	// 使用int8，超过范围就会包超出范围
 	var num2 int8 = 127
-
+	// 无符号的类型uint8，表示0---255，uint16：0---2de15
+	
 
 	fmt.Println(num1)
 	fmt.Println(num2)
