@@ -1,6 +1,11 @@
 package main
-import "fmt"
-import "unsafe"
+// import "fmt"
+// import "unsafe"
+// 引入包可以使用简洁,更专业的写法
+import (
+	"fmt"
+	"unsafe"
+)
 
 
 // 整数类型数据:有符号和无符号，有符号可以表示负值，无符号只能表示正值，int和uint的大小和系统位数有关
@@ -26,8 +31,6 @@ func main() {
 	// unsafe.Sizeof(num1) 是unsafe的一个函数，可以返回num1变量占用的字节数
 	fmt.Printf("数据类型：%T 占用的字节数：%d", num1, unsafe.Sizeof(num1))
 }
-
-
 
 
 
