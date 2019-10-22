@@ -18,6 +18,7 @@ var (
 // 声明变量：只是定义一个变量例如var n int
 // 初始化变量：在定义变量的同时，给变量还赋值了，var n = 10
 // 变量赋值：定义变量后，给变量赋值，例如var n int        n = 20
+// 加号使用：两边都是数值时候，表示数学运算，两边都是str时，表示连接运算
 
 func main() {
 	// 先定义后赋值的方式，var是variable，意思是变量，可以变的
@@ -36,6 +37,8 @@ func main() {
 	b1,b2,b3 := 18,"小红","女孩"
 	// 修改变量的值
 	b3 = "超甜"
+	// 加号使用
+	sum := name + age
 
 	// 打印输出格式
 	fmt.Println("name=",name)
@@ -49,7 +52,11 @@ func main() {
 	fmt.Println("c1,c2,c3,c4=",c1,c2,c3,c4)
 	// 打印修改后的变量
 	fmt.Println("b3=",b3)
+	fmt.Println("sum=",sum)
 }
+
+
+
 
 
 
@@ -62,4 +69,5 @@ a1,a2,a3= 100 xiaoming 男孩
 b1,b2,b3= 18 小红 超甜
 c1,c2,c3,c4= 200 300 400 nihao
 b3= 超甜
+sum= 37
 [Finished in 0.7s]
