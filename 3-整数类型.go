@@ -1,5 +1,6 @@
 package main
 import "fmt"
+import "unsafe"
 
 
 // 整数类型数据:有符号和无符号，有符号可以表示负值，无符号只能表示正值，int和uint的大小和系统位数有关
@@ -20,11 +21,17 @@ func main() {
 	fmt.Println(num2)
 	// 格式化输出的时候%T 中t就是type
 	fmt.Printf("nihaoya,niduoda %T", num2)
+
+	// 如何查看程序中某个变量的占用字节大小和数据类型
+	// unsafe.Sizeof(num1) 是unsafe的一个函数，可以返回num1变量占用的字节数
+	fmt.Printf("数据类型：%T 占用的字节数：%d", num1, unsafe.Sizeof(num1))
 }
+
+
 
 
 
 
 -129
 127
-[Finished in 1.0s]
+nihaoya,niduoda int8数据类型：int 占用的字节数：8[Finished in 0.8s]
