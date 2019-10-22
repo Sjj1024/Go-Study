@@ -12,7 +12,7 @@ func main() {
 	var age int = 18
 	// 类型推到
 	var height = "178"
-	// 海象赋值
+	// 海象赋值, 声明的同时赋值，并且冒号不能省略
 	gender := "男孩"
 
 	// 打印输出格式
@@ -21,7 +21,6 @@ func main() {
 	fmt.Println("height=", height)
 	fmt.Println("gender=", gender)
 }
-
 
 
 name= 19
