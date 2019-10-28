@@ -55,3 +55,39 @@ func main() {
 
 
 
+// 运算符练习题
+package main
+import (
+	"fmt"
+)
+
+
+// 加入还有97天放假，问：多少个星期零几天
+// 定义一个变量保存华氏温度，华氏温度转换为摄氏维度的公式：5/9*(华氏温度-100)，请求出华氏温度对应的摄氏维度
+func main() {
+	// 计算放假天数
+	days := 97
+	monday := 97 / 7
+	day := days % 7
+	fmt.Println("还有", monday, day)
+	fmt.Printf("%d星期%d天\n", monday,day)
+
+
+	// 定义一个变量求维度
+	huashi := 95.2
+	sheshi := 5.0 / 9 * (huashi - 100)
+	fmt.Println(sheshi)
+
+}
+
+
+
+还有 13 6
+13星期6天
+-2.666666666666665
+[Finished in 0.7s]
+
+
+
+
+
