@@ -1,5 +1,8 @@
 package main
-import "fmt"
+
+import (
+	"fmt"
+)
 
 func main(){
 	var num1 int
@@ -12,6 +15,7 @@ func main(){
 	// case后面的数据不能重复
 	// case后面不需要带break，匹配到后就执行代码，然后退出
 	// default可以没有，
+	// switch后面可以不带表达式，但是case后面要带上判断
 	switch num1 {
 	case 1:
 		fmt.Println("这是周一！")
@@ -19,6 +23,13 @@ func main(){
 		fmt.Println("这是周二！")
 	default:
 		fmt.Println("输入有误！")
+	}
+	// switch后不带表达式的用法
+	switch {
+	case num1>4:
+		fmt.Println("真的可以")
+	case num1<4:
+		fmt.Println("完美！")
 
 	}
 }
