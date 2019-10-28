@@ -28,14 +28,20 @@ func main(){
 	switch {
 	case num1>4:
 		fmt.Println("真的可以")
+		fallthrough
 	case num1<4:
 		fmt.Println("完美！")
-
+	case num1 ==8:
+		fmt.Println(num1)
 	}
+	// switch中穿透fallthrough，如果在case语句后增加fallthrough，
+	// 则会继续执行后一个case，也叫switch穿透，默认只穿透一个
 }
 
 
 
 请输入一个整数：
-4
+8
 这是周二！
+真的可以
+完美！
