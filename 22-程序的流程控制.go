@@ -33,7 +33,30 @@ func main() {
 		fmt.Println("4")
 	}
 
+	num3 := 4
+	fmt.Println(num3 * 2)
+
+	// switch分支结构:每一个case都是唯一的
+	var kay int
+	fmt.Println("请输入一个数字：")
+	fmt.Scanln(&kay)
+
+	switch kay{
+		case 1:
+			fmt.Println("这是周一!")
+		case 2:
+			fmt.Println("这是周二！")
+		case 3:
+			fmt.Println("这是周三！")
+		case 4:
+			fmt.Println("这是周四！")
+		default:
+			fmt.Println("太累了不想写了！")
+	}
+
 }
+
+
 
 
 我喜欢你
