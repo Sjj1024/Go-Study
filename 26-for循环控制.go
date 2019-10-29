@@ -32,15 +32,24 @@ func main() {
 		}else{
 			break
 		}
-		n++
-		
+		n++	
+	}
+
+	// for的方式遍历字符串和数组
+	var str1 = "woainia"
+	for i:=0;i<len(str1);i++{
+		fmt.Printf("%c \n", str1[i])
+	}
+
+	// 第二种for-range:index是索引，val是索引对应的值
+	for index, val:=range str1{
+		fmt.Printf("%d, %c \n", index, val)
 	}
 }
 
 
 
 
-
 我爱你
 我爱你
 我爱你
@@ -63,5 +72,18 @@ zhende
 zhende
 zhende
 zhende
-[Finished in 0.6s]
-
+w 
+o 
+a 
+i 
+n 
+i 
+a 
+0, w 
+1, o 
+2, a 
+3, i 
+4, n 
+5, i 
+6, a 
+[Finished in 1.2s]
