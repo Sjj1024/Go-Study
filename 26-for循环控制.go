@@ -35,14 +35,18 @@ func main() {
 		n++	
 	}
 
-	// for的方式遍历字符串和数组
+	// 如果字符串中有中文，那么这种传统遍历会出现错误，传统遍历是按照字节来遍历的，但是汉字占3个字节
+	// 解决办法就是将str转成切片
+	// for的传统方式遍历字符串和数组
 	var str1 = "woainia"
 	for i:=0;i<len(str1);i++{
 		fmt.Printf("%c \n", str1[i])
 	}
 
+	// for-range不会出现汉字错误的错误，因为这种默认是按照字符遍历的
 	// 第二种for-range:index是索引，val是索引对应的值
-	for index, val:=range str1{
+	var str2 = "woainia祖国"
+	for index, val:=range str2{
 		fmt.Printf("%d, %c \n", index, val)
 	}
 }
@@ -86,4 +90,6 @@ a
 4, n 
 5, i 
 6, a 
-[Finished in 1.2s]
+7, 祖 
+10, 国 
+[Finished in 1.3s]
