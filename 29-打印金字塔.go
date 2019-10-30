@@ -28,6 +28,27 @@ func main() {
 		fmt.Println("")
 	}
 
+	// 水仙花数
+	fmt.Println("---------------------")
+	var num = 100
+	for ;num<1000;num++{
+		if 100< num && num < 1000{
+			fmt.Println("这是一个三位数")
+			var ge = num % 10
+			var shi = num / 10 % 10
+			var bai = num / 100
+			var sum = ge*ge*ge + shi*shi*shi + bai*bai*bai
+			fmt.Printf("个位是：%d 十位是：%d 百位是：%d 立方和是:%d \n", ge, shi, bai, sum)
+			if num == sum{
+				fmt.Println("恭喜，这是一个 水仙花数======================")
+			}else{
+				fmt.Println("不好意思，这不是一个水仙花数")
+			}
+		}else{
+			fmt.Println("不是一个三位数")
+		}
+	}
+
 }
 
 
