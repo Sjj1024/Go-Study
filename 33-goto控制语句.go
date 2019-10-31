@@ -8,6 +8,7 @@ import "fmt"
 // 基本语法：goto 标签
 // goto label（标签名字可以随便取）
 // return 使用在方法或者函数中，表示跳出所在的方法或函数，在讲解函数的时候，会详细讲解
+// 如果说将return放在main函数中，那么整个程序就终止了，因为main函数是入口
 
 
 func main() {
@@ -20,6 +21,8 @@ func main() {
 		fmt.Println(i)
 	}
 }
+
+
 
 
 1
