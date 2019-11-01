@@ -28,3 +28,28 @@ func Cal(num1 int, num2 string, num3 int) int{
 	}
 	return sum
 }
+
+
+
+
+
+package main
+import (
+	"fmt"
+	"utils"
+)
+
+
+// 包的本质就是创建不同的文件夹存放不同的方法
+// go的每一个文件都属于一个包，也就是说go是以包来区分文件的
+// 控制函数，变量的使用范围，
+// 调用包的方法：import 包路径，使用的时候包.方法名
+
+
+func main() {
+	// 包的介绍和使用
+	// 使用函数
+	res := utils.Cal(5, "+", 5)
+	fmt.Println("res=", res)
+
+}
