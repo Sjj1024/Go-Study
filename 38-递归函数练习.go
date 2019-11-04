@@ -16,7 +16,8 @@ go函数不支持函数重载（不允许函数名重名）
 函数及人事一种数据类型，函数也可以作为形参，并且调用；
 为了简化数据类型，go支持自定义数据类型，基本语法：
 type 自定义数据类型名字 数据类型  理解：相当于一个别名
-例子：type myint int // 这是myint 就等价int来使用了
+例子：type myint int // 这是myint 就等价int来使用了，但是go中还是认为这两个是不同的类型
+如果需要这两种类型赋值的话， 还是需要进行数据类型转换的。
 
 支持对函数返回值命名：
 func cal(num int) (sum int){
@@ -72,6 +73,14 @@ func diao(myfunc func(int) int, num3 int) int {
 	return myfunc(num3)
 }
 
+
+// 函数自定义数据类型使用在函数名传递的时候，方便
+type myFunc func(int) int
+// 通过自定义函数类型，进行函数名调用
+func dia2(myfun myFunc, num3 int) int {
+	return myfun(num3)
+}
+
 // 数组传递都是值传递，
 func main() {
 	// 使用递归求出给你一个整数的斐波那契数列的和
@@ -101,6 +110,12 @@ func main() {
 	num5 := diao(hanshu, num4)
 	fmt.Println(num5)
 
+	// 函数自定义数据类型使用在函数名传递的时候，方便
+	// type myFunc func(int) int
+	num6 := 7
+	num7 := dia2(hanshu, num6)
+	fmt.Println(num7)
+
 }
 
 
@@ -114,4 +129,5 @@ func main() {
 30
 30
 255
-[Finished in 0.9s]
+255
+[Finished in 1.0s]
