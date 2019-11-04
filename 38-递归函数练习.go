@@ -66,8 +66,13 @@ func yin(n *int){
 	fmt.Println(*n)
 }
 
-// 数组传递都是值传递，
 
+// 通过函数中调用函数名
+func diao(myfunc func(int) int, num3 int) int {
+	return myfunc(num3)
+}
+
+// 数组传递都是值传递，
 func main() {
 	// 使用递归求出给你一个整数的斐波那契数列的和
 	sum := feibo(4)
@@ -91,6 +96,11 @@ func main() {
 	bieming(&num2)
 	fmt.Println(num2)
 
+	// 调用函数的引用，在函数中使用别的函数
+	num4 := 7
+	num5 := diao(hanshu, num4)
+	fmt.Println(num5)
+
 }
 
 
@@ -103,4 +113,5 @@ func main() {
 20
 30
 30
+255
 [Finished in 0.9s]
