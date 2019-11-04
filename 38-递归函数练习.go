@@ -48,6 +48,13 @@ func houzi(n int) int{
 	}
 }
 
+
+// 使用指针进行引用类型传递的效果
+func yin(n *int){
+	*n = *n + 10
+	fmt.Println(*n)
+}
+
 // 数组传递都是值传递，
 
 func main() {
@@ -62,8 +69,12 @@ func main() {
 	// 求出第一天一共有多少个桃子
 	tao := houzi(1)
 	fmt.Println(tao)
-}
 
+	// 使用引用累心进行引用传递
+	num := 10
+	yin(&num)
+	fmt.Println(num)
+}
 
 
 
@@ -71,4 +82,6 @@ func main() {
 3
 7
 1534
-[Finished in 0.8s]
+20
+20
+[Finished in 1.0s]
