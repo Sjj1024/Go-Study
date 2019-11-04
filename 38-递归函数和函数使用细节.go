@@ -25,6 +25,12 @@ func cal(num int) (sum int){
 	return 
 }
 
+go中支持可变参数：
+案例演示：func sum(n1 int, args... int) int{
+	函数体
+}
+
+
 */
 
 // 斐波那契数列
@@ -82,6 +88,17 @@ func dia2(myfun myFunc, num3 int) int {
 	return myfun(num3)
 }
 
+
+// 可变参数的函数,args的名字可以随便改，相当于列表的名字
+func sumn(num8 int, args... int) int {
+	end := num8
+	// 遍历args这个切片
+	for i:=0; i<len(args); i++{
+		end += args[i]  // args[i] 表示取出切片的第一个元素值，切片是可变的数组列表
+	}
+	return end
+}
+
 // 数组传递都是值传递，
 func main() {
 	// 使用递归求出给你一个整数的斐波那契数列的和
@@ -117,13 +134,12 @@ func main() {
 	num7 := dia2(hanshu, num6)
 	fmt.Println(num7)
 
-	// 支持函数名的返回值命名
+	// 支持可变参数
+	end := sumn(1, 4, 5, 6)
+	fmt.Println(end)
 
 
 }
-
-
-
 
 
 
@@ -140,4 +156,5 @@ func main() {
 30
 255
 255
-[Finished in 1.0s]]
+16
+[Finished in 3.4s]
