@@ -9,9 +9,10 @@ import "fmt"
 
 // 如果返回值是一个，int可以不用括号括起来，如果是多个值，需要使用括号
 // return多个值的时候，使用逗号隔开
-func getSum(n1 int, n2 int) (int) {
+func getSum(n1 int, n2 int) (int, int) {
 	sum := n1 + n2
-	return sum
+	jian := n2 - n1
+	return sum, jian
 }
 
 
@@ -23,13 +24,12 @@ func main() {
 	// 基本数据类型：变量存的是数据的值，例如n := 10,n就是基本数据类型
 	// 引用数据类型：变量存的是内存地址，例如指针&pre，这个内存地址指向的才是真正的数据值
 	// 
-	sum := getSum(5, 6)
-	fmt.Println(sum)
+	sum, jian := getSum(5, 6)
+	fmt.Println(sum, jian)
 
 }
 
 
 
-
-11
-[Finished in 1.7s]
+11 1
+[Finished in 1.6s]
