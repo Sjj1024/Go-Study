@@ -1,5 +1,8 @@
 package main
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // 闭包的理解
 /*
@@ -25,12 +28,20 @@ func main() {
 	f := Addnum()
 	fmt.Println(f(1))  // 11
 	fmt.Println(f(1))  // 12
-}
 
+	str1 := "wenjian.jpg"
+	suffix := ".jpg"
+	// 需要引用strings包，然后使用HasSuffix属性判断str1是否有suffix后缀
+	if ! strings.HasSuffix(str1, suffix){
+		str1 += suffix
+	}
+	fmt.Println(str1)
+}
 
 
 
 
 11
 12
-[Finished in 0.9s]
+wenjian.jpg
+[Finished in 1.9s]
