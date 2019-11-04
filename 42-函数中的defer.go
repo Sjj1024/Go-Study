@@ -7,10 +7,13 @@ import "fmt"
 在函数中，程序员经常需要创建资源（比如数据库连接，文件句柄，锁等）为了在函数执行完毕后，
 及时的释放资源，Go的设计者提供defer延时机制。
 
+在defer将语句放入到栈时，也会将相关的值拷贝同时入栈
+
 */
 
 func sum(n1, n2 int) int{
-	// defer 会将后面的内容压入defer栈中，保持先进后出的原则
+	// defer 会将后面的内容压入defer栈中，保持先进后出的原则，当函数代码执行完后，
+	// 再来执行这里的内容，
 	defer fmt.Println("ok1, n1======")
 	defer fmt.Println("ok2, n2========")
 
@@ -24,7 +27,6 @@ func main() {
 	res := sum(10, 20)
 	fmt.Println(res)
 }
-
 
 
 
