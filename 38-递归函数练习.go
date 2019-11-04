@@ -28,11 +28,11 @@ func hanshu(n int) int{
 // 猴子吃桃子的问题：猴子每天吃桃子的一半并多吃一个，当第十天的时候发现只有一个桃子了，
 // 问最初有多少个桃子
 func houzi(n int) int{
-	if n == 10{
+	if n == 10 {
 		return 1
 	}else{
 		n++
-		return 2*houzi(n) + 1
+		return 2*(houzi(n) +1)
 	}
 }
 
@@ -54,5 +54,5 @@ func main() {
 
 3
 7
-1023
+1534
 [Finished in 0.8s]
