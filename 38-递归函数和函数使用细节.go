@@ -90,6 +90,7 @@ func dia2(myfun myFunc, num3 int) int {
 
 
 // 可变参数的函数,args的名字可以随便改，相当于列表的名字
+// 可变参数必须写在形参列表最后，否则无法通过
 func sumn(num8 int, args... int) int {
 	end := num8
 	// 遍历args这个切片
@@ -157,4 +158,4 @@ func main() {
 255
 255
 16
-[Finished in 3.4s]
+[Finished in 3.5s]
