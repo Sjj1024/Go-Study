@@ -19,9 +19,10 @@ type 自定义数据类型名字 数据类型  理解：相当于一个别名
 例子：type myint int // 这是myint 就等价int来使用了，但是go中还是认为这两个是不同的类型
 如果需要这两种类型赋值的话， 还是需要进行数据类型转换的。
 
-支持对函数返回值命名：
+支持对函数返回值命名：优点：return后面不用再写返回值名字了
 func cal(num int) (sum int){
-	函数体
+	sum = num + 10
+	return 
 }
 
 */
@@ -116,7 +117,17 @@ func main() {
 	num7 := dia2(hanshu, num6)
 	fmt.Println(num7)
 
+	// 支持函数名的返回值命名
+
+
 }
+
+
+
+
+
+
+
 
 
 
